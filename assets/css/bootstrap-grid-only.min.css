@@ -1,0 +1,6 @@
+/*! bootstrap-grid-only.min.css | Bootstrap 5.3 Grid Only + Gap + Offset */
+.container{width:100%;padding-right:var(--bs-gutter-x,.75rem);padding-left:var(--bs-gutter-x,.75rem);margin-right:auto;margin-left:auto;}
+.row{display:flex;flex-wrap:wrap;margin-right:calc(-.5 * var(--bs-gutter-x));margin-left:calc(-.5 * var(--bs-gutter-x));}
+.col-md-4{flex:0 0 auto;width:33.3333333333%;padding-right:calc(var(--bs-gutter-x)/2);padding-left:calc(var(--bs-gutter-x)/2);}
+.offset-md-1{margin-left:8.3333333333%;}
+.g-3{--bs-gutter-x:1rem;--bs-gutter-y:1rem;}

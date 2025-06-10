@@ -1,0 +1,464 @@
+:root {
+  --color-text-main: #2a2a2a;
+  --color-boder-main: #f1f1f1;
+  --bs-body-font-family: "Sarabun", sans-serif !important;
+}
+
+.mySwiper {
+  height: 700px !important; /* ความสูงที่ต้องการ */
+}
+
+.detail-home {
+  margin-left: 0 !important;
+}
+
+.img-detail-home {
+  margin-right: 0 !important;
+}
+
+/* Style for the icon features section */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 16px 0;
+  transition: box-shadow 0.2s;
+}
+
+.feature-item:hover .feature-icon-bg {
+  box-shadow: 0 4px 16px rgba(0, 128, 255, 0.1), 0 1.5px 3px rgba(0, 0, 0, 0.08);
+  background: #e8f5ff;
+  transform: scale(1.08);
+}
+
+.feature-icon-bg {
+  background: #f0f4f8; /* สีจางแนวฟ้า pool */
+  border-radius: 50%;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
+}
+
+.feature-icon {
+  width: 35px;
+  opacity: 0.8;
+  display: block;
+}
+
+.feature-text {
+  margin: 0 !important;
+}
+
+.feature-title {
+  font-weight: 600;
+  font-size: 17px !important;
+  color: #132b45;
+  margin: 0 0 4px 0 !important;
+}
+
+.feature-sub {
+  font-size: 14px !important;
+  color: #7b8a99;
+  margin: 0 !important;
+}
+
+/* Style for the category cards */
+.box-category-card {
+  border: 1px solid #e5e5e5;
+  padding: 13px;
+  border-radius: 8px;
+}
+.category-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  overflow: hidden;
+}
+
+.category-image {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 100px;
+}
+
+.category-icon {
+  position: absolute;
+  font-size: 16px !important;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.category-card:hover .category-image {
+  transform: scale(0.9);
+  filter: brightness(0.6);
+}
+
+.category-card:hover .overlay-title {
+  color: rgb(76, 166, 250) !important;
+}
+
+.category-card:hover .category-icon {
+  opacity: 1;
+}
+
+.overlay-title {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: black !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0 !important;
+}
+
+.category-card:hover .overlay-button {
+  background: white;
+  color: black;
+}
+
+/* Style for title view all */
+.title-view-all h2 {
+  margin: 0 !important;
+}
+
+.view-all {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.view-all a {
+  text-decoration: none !important;
+  color: #999999;
+  font-weight: 500;
+}
+
+.view-all a:hover {
+  color: #111;
+}
+
+/* Style for the product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card a {
+  text-decoration: none;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+.product-price {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+.btn-cart {
+  background: #0056a5;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Style for the category posts */
+.link-category-posts {
+  text-decoration: none;
+}
+
+.box-category-posts {
+  border: 1px solid #e5e5e5;
+  padding: 13px;
+  border-radius: 8px;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+  background: #fff;
+}
+
+/* เอฟเฟกต์ตอน hover */
+.box-category-posts:hover {
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.08),
+    0 1.5px 3px rgba(0, 0, 0, 0.07);
+  border: 1.5px solid #60b5e3; /* ฟ้าสว่าง หรือปรับตามธีม */
+  background: #f3fbff; /* สีฟ้าอ่อน หรือ #f8f9fa ก็ได้ */
+  cursor: pointer;
+}
+
+.box-title-post {
+  margin-top: 10px;
+}
+
+.date-post {
+  color: #5e5e5e;
+}
+
+.title-post {
+  font-size: 19px;
+  color: #212529;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.detail-post {
+  color: var(--color-text-main);
+}
+
+/* Style for the home new arrivals section */
+.home-new-arrivals {
+  background-color: #000;
+}
+
+.product-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* จำกัด 2 บรรทัด */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3em; /* ป้องกัน layout กระโดด */
+}
+
+/* Style for the icon list choose us section */
+.icon-list-chooes-us {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.img-icon-list-chooes-us {
+  width: 33px;
+  margin-right: 7px;
+}
+
+.text-icon-list-chooes-us {
+  margin: 0 !important;
+}
+
+/* Style for the footer section */
+.bg-footer {
+  border-top: 1px solid var(--color-boder-main);
+}
+
+.box-icon-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-footer {
+  width: 35px;
+  margin: 0;
+}
+
+.ul-footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ul-footer-menu li {
+  margin-bottom: 8px;
+}
+
+.ul-footer-menu li a {
+  text-decoration: none !important;
+  color: var(--color-text-main);
+}
+
+.ul-footer-menu li a::before {
+  content: "›"; /* หรือ "\f054" สำหรับ FontAwesome (ต้องใช้ font-family ด้วย) */
+  display: inline-block;
+  margin-right: 7px;
+  color: var(--color-text-main); /* เปลี่ยนสี icon ได้ */
+  font-size: 12px;
+  /* font-family: "Font Awesome 6 Free"; font-weight: 900;  ถ้าใช้ FontAwesome */
+}
+
+.ul-footer-menu li a:hover {
+  color: #0056a5;
+}
+
+/*///////////////// woocommerce /////////////////*/
+
+/* ซ่อนตัวเลขจำนวนรายการในหมวดหมู่ */
+.wc-block-product-categories-list-item-count {
+  display: none !important;
+}
+
+.wc-block-product-categories {
+  margin-bottom: 0 !important;
+}
+
+.wc-block-product-categories
+/* กล่อง Sidebar เฉพาะ Widget หมวดหมู่ใน Sidebar เท่านั้น */
+.astra-off-canvas-sidebar .ast-filter-wrap .widget,
+.ast-filter-wrap .ast-woo-sidebar-widget.widget {
+  border: 1.5px solid var(--color-boder-main);
+  border-radius: 9px;
+  padding: 22px 20px 18px 20px;
+  box-shadow: none;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+/* หัวข้อ (Title) */
+.ast-sidebar-main .widget_product_categories .widget-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 17px;
+  letter-spacing: 0;
+}
+
+/* รายการลิสต์ */
+.wc-block-product-categories-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wc-block-product-categories-list li {
+  padding: 0;
+  border-bottom: 1px solid var(--color-boder-main);
+  margin-bottom: 0;
+}
+
+.wc-block-product-categories-list li:last-child {
+  border-bottom: none;
+}
+
+/* ลิงก์ในรายการ */
+.wc-block-product-categories-list li a {
+  display: block;
+  padding: 8px 0;
+  color: #222;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.15s;
+  font-weight: 500;
+}
+
+/* Hover effect */
+.wc-block-product-categories-list li a:hover {
+  color: #0072c6;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ast-sidebar-main .widget_product_categories {
+    padding: 14px 8px 8px 8px;
+  }
+  .ast-sidebar-main .widget_product_categories .widget-title {
+    font-size: 17px;
+  }
+  .ast-sidebar-main .widget_product_categories li a {
+    font-size: 15px;
+  }
+}
+
+/* Container หลักของแต่ละสินค้า */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  border-radius: 14px;
+  border: 1px solid var(--color-boder-main);
+  margin: 0 0 24px 0;
+  transition: box-shadow 0.2s, transform 0.16s;
+}
+
+/* ชื่อสินค้า */
+.woocommerce ul.products li.product h2.woocommerce-loop-product__title {
+  font-size: 15px;
+  color: var(--color-text-main);
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* จำกัด 2 บรรทัด */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 44px; /* ป้องกันสินค้าสูงต่ำไม่เท่ากัน */
+  line-height: 1.6;
+}
+
+/* ราคา */
+.woocommerce-js ul.products li.product .price {
+  font-size: 20px !important;
+}
+.woocommerce-js ul.products li.product a.ast-loop-product__link {
+  text-decoration: none !important;
+}
+
+.woocommerce ul.products li.product .button {
+  width: 100%;
+  text-align: center;
+  font-size: 14px !important;
+  text-decoration: none !important;
+}
+
+/* รูปสินค้า */
+.woocommerce ul.products li.product img {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+/* ปรับแต่งลิสต์หมวดหมู่สินค้า */
+.wc-block-product-categories-list
+  .wc-block-product-categories-list--depth-1
+  li
+  a::before {
+  content: "› ";
+  color: #0073e6;
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+
+.card-content-product-cat {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--color-boder-main);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-content-product-cat:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px) scale(1.03);
+  cursor: pointer;
+}
+
+.card-body-content-product-cat {
+  text-align: center;
+}
