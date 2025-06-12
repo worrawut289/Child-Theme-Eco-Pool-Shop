@@ -462,3 +462,26 @@
 .card-body-content-product-cat {
   text-align: center;
 }
+
+
+.album-gap-0 img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-gap-0 img:hover {
+  transform: scale(1.20);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28); /* เงาสวย ๆ */
+}
+
+.box-service {
+  padding: 16px;
+}
+
+.box-service-item {
+  padding: 20px;
+  border: 1px solid var(--color-boder-main);
+}

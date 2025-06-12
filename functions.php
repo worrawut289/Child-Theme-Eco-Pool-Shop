@@ -210,3 +210,15 @@ add_action('acf/init', function () {
         'keywords'        => ['menu', 'footer', 'navigation'],
     ]);
 });
+
+
+add_action('acf/init', function () {
+    acf_register_block_type([
+        'name'            => 'horizontal-album-gap-0',
+        'title'           => __('ACF Horizontal Album Gap 0', 'your-textdomain'),
+        'render_template' => get_stylesheet_directory() . '/template-parts/blocks/horizontal-album-gap-0.php',
+        'category'        => 'formatting',
+        'icon'            => 'images-alt2',
+        'keywords'        => ['album'],
+    ]);
+});
