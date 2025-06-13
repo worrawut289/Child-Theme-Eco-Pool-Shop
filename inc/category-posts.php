@@ -28,21 +28,24 @@ function shortcode_category_posts($atts) {
     <div class="row">
         <?php if ($query_post->have_posts()) : ?>
         <?php while ($query_post->have_posts()) : $query_post->the_post(); ?>
-        <div class="col-12 col-md-4 col-lg-4 mt-2">
+        <div class="col-12 col-md-4 col-lg-4 mt-3">
             <a class="link-category-posts " href="<?php the_permalink(); ?>">
                 <div class="box-category-posts">
                     <div class="img-post">
                         <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     </div>
-                    <div class="box-title-post">
-                        <span class="date-post">
+                    <div class="box-title-post ">
+                        <!-- <span class="date-post">
                             <i class="fa-regular fa-calendar"></i>
                             <?php echo get_the_date(); ?>
-                        </span>
-                        <h1 class="title-post mt-2"><?php echo the_title(); ?></h1>
+                        </span> -->
+                        <h1 class="title-post "><?php echo the_title(); ?></h1>
                     </div>
                     <div class="detail-post">
                         <?php echo the_excerpt(); ?>
+                    </div>
+                    <div class="box-category-footer">
+                        <a href="<?php the_permalink(); ?>">Read More</a>
                     </div>
                 </div>
             </a>

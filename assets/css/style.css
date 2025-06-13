@@ -1,11 +1,16 @@
 :root {
   --color-text-main: #2a2a2a;
+  --color-title-main: #0056a5;
   --color-boder-main: #f1f1f1;
   --bs-body-font-family: "Sarabun", sans-serif !important;
 }
 
-.mySwiper {
-  height: 700px !important; /* ความสูงที่ต้องการ */
+a {
+  text-decoration: none !important;
+}
+
+.page .entry-header {
+  margin-top: 25px !important;
 }
 
 .detail-home {
@@ -195,11 +200,12 @@
 
 /* Style for the category posts */
 .link-category-posts {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .box-category-posts {
   border: 1px solid #e5e5e5;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
   padding: 13px;
   border-radius: 8px;
   transition: box-shadow 0.2s, border 0.2s, background 0.2s;
@@ -208,11 +214,12 @@
 
 /* เอฟเฟกต์ตอน hover */
 .box-category-posts:hover {
-  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.08),
-    0 1.5px 3px rgba(0, 0, 0, 0.07);
-  border: 1.5px solid #60b5e3; /* ฟ้าสว่าง หรือปรับตามธีม */
-  background: #f3fbff; /* สีฟ้าอ่อน หรือ #f8f9fa ก็ได้ */
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+}
+
+.img-post img {
+  border-radius: 6px;
 }
 
 .box-title-post {
@@ -220,19 +227,32 @@
 }
 
 .date-post {
-  color: #5e5e5e;
+  color: #5e5e5e !important;
 }
 
 .title-post {
-  font-size: 19px;
-  color: #212529;
-  text-align: center;
-  margin-top: 12px;
-  margin-bottom: 10px;
+  font-size: 19px !important;
+  color: var(--color-title-main) !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
 }
 
 .detail-post {
   color: var(--color-text-main);
+}
+
+.box-category-footer {
+  padding: 10px 0 0;
+  border-top: 1px dashed #ddd;
+}
+
+.box-category-footer a {
+  color: #999;
+  text-decoration: none !important;
+}
+
+.box-category-footer a:hover {
+  color: #0056a5;
 }
 
 /* Style for the home new arrivals section */
@@ -416,7 +436,7 @@
 
 /* ราคา */
 .woocommerce-js ul.products li.product .price {
-  font-size: 20px !important;
+  font-size: 18px !important;
 }
 .woocommerce-js ul.products li.product a.ast-loop-product__link {
   text-decoration: none !important;
@@ -463,7 +483,6 @@
   text-align: center;
 }
 
-
 .album-gap-0 img {
   width: 100%;
   height: 280px;
@@ -473,7 +492,7 @@
 }
 
 .album-gap-0 img:hover {
-  transform: scale(1.20);
+  transform: scale(1.2);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28); /* เงาสวย ๆ */
 }
 
