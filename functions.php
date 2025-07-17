@@ -222,3 +222,15 @@ add_action('acf/init', function () {
         'keywords'        => ['album'],
     ]);
 });
+
+
+add_action('acf/init', function () {
+    acf_register_block_type([
+        'name'            => 'line-contact',
+        'title'           => __('ACF Line Contact', 'your-textdomain'),
+        'render_template' => get_stylesheet_directory() . '/template-parts/blocks/line-contact.php',
+        'category'        => 'formatting',
+        'icon'            => 'images-alt2',
+        'keywords'        => ['contact', 'line'],
+    ]);
+});

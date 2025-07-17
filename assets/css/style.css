@@ -32,6 +32,14 @@ a {
   transition: box-shadow 0.2s;
 }
 
+@media screen and (max-width: 576px) {
+  .feature-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 .feature-item:hover .feature-icon-bg {
   box-shadow: 0 4px 16px rgba(0, 128, 255, 0.1), 0 1.5px 3px rgba(0, 0, 0, 0.08);
   background: #e8f5ff;
@@ -47,6 +55,13 @@ a {
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
+}
+
+@media screen and (max-width: 576px) {
+  .feature-icon-bg {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .feature-icon {
@@ -73,10 +88,30 @@ a {
 }
 
 /* Style for the category cards */
+.grid-category {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* แบ่ง 5 คอลัมน์เท่ากัน */
+  gap: 20px; /* ระยะห่างระหว่างช่อง */
+}
+
+@media (max-width: 992px) {
+  .grid-category {
+    grid-template-columns: repeat(3, 1fr); /* tablet: เหลือ 3 ช่อง */
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-category {
+    grid-template-columns: repeat(2, 1fr); /* mobile: เหลือ 2 ช่อง */
+  }
+}
+
 .box-category-card {
   border: 1px solid #e5e5e5;
-  padding: 13px;
-  border-radius: 8px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 .category-card {
   position: relative;
@@ -113,7 +148,7 @@ a {
   filter: brightness(0.6);
 }
 
-.category-card:hover .overlay-title {
+.category-card:hover .overlay-title .overlay-title-en {
   color: rgb(76, 166, 250) !important;
 }
 
@@ -122,10 +157,18 @@ a {
 }
 
 .overlay-title {
+  text-align: center;
   font-size: 15px !important;
   font-weight: 500 !important;
-  color: black !important;
-  margin-top: 0.8rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+.overlay-title-en {
+  text-align: center;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  margin-top: 0.3rem !important;
   margin-bottom: 0 !important;
 }
 
@@ -503,4 +546,90 @@ a {
 .box-service-item {
   padding: 20px;
   border: 1px solid var(--color-boder-main);
+}
+
+/* Style for the table component */
+.table_component {
+  overflow: auto;
+  width: 100%;
+}
+
+.table_component p {
+  margin: 0;
+  padding: 0;
+}
+
+.table_component table {
+  border: 1px solid #dededf;
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: center;
+}
+
+.table_component tbody .code {
+  text-align: center;
+}
+
+.table_component tbody .description {
+  text-align: left;
+}
+
+.table_component caption {
+  caption-side: top;
+  text-align: center;
+}
+
+.table_component th {
+  border: 1px solid #dededf;
+  background-color: #eceff1;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+}
+
+.table_component td {
+  border: 1px solid #dededf;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .table_component {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .table_component table {
+    display: block;
+  }
+}
+
+.button-line-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #00c300; /* สีเขียว Line */
+  font-size: 18px;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  /* font-weight: 600; */
+  transition: background-color 0.2s ease;
+}
+
+.button-line-contact:hover {
+  background-color: #009e00;
+  text-decoration: none;
+  color: white;
+}
+
+.button-line-contact img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
 }

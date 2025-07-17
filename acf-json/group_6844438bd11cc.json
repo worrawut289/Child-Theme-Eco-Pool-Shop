@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_6844438cd3d20",
-            "label": "หมวดหมู่สินค้าเด่น",
+            "label": "หมวดหมู่สินค้า",
             "name": "repeater_product_categories",
             "aria-label": "",
             "type": "repeater",
@@ -74,6 +74,28 @@
                     "parent_repeater": "field_6844438cd3d20"
                 },
                 {
+                    "key": "field_6877631b0c7d3",
+                    "label": "ชื่อหมวดหมู่ En",
+                    "name": "name_en",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6844438cd3d20"
+                },
+                {
                     "key": "field_68444418d3d23",
                     "label": "Link หมวดหมู่",
                     "name": "link",
@@ -112,5 +134,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1749304379
+    "modified": 1752654677
 }
