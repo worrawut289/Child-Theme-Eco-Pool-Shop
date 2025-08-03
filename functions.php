@@ -234,3 +234,14 @@ add_action('acf/init', function () {
         'keywords'        => ['contact', 'line'],
     ]);
 });
+
+add_action('acf/init', function () {
+    acf_register_block_type([
+        'name'            => 'best-seller-section',
+        'title'           => __('ACF Best Seller', 'your-textdomain'),
+        'render_template' => get_stylesheet_directory() . '/template-parts/blocks/best-seller-section.php',
+        'category'        => 'formatting',
+        'icon'            => 'images-alt2',
+        'keywords'        => ['best', 'seller', 'product'],
+    ]);
+});
