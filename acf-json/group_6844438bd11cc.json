@@ -110,7 +110,7 @@
                         "id": ""
                     },
                     "return_format": "url",
-                    "allow_in_bindings": 0,
+                    "allow_in_bindings": 1,
                     "parent_repeater": "field_6844438cd3d20"
                 }
             ]
@@ -134,5 +134,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752654677
+    "modified": 1752834779
 }

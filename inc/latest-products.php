@@ -8,6 +8,9 @@ function render_latest_products() {
     'posts_per_page' => 15,
     'orderby'        => 'date',
     'order'          => 'DESC',
+    'no_found_rows'  => true,
+    'update_post_term_cache' => false,
+    'update_post_meta_cache' => false,
   ];
 
   $loop = new WP_Query($args);
@@ -24,7 +27,6 @@ function render_latest_products() {
                     <h3 class="product-title"><?php the_title(); ?></h3>
                 </a>
                 <p class="product-price"><?php echo $product->get_price_html(); ?></p>
-
             </div>
         </div>
         <?php endwhile; ?>

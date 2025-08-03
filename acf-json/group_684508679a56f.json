@@ -20,8 +20,29 @@
             "sub_fields": [
                 {
                     "key": "field_6845089568877",
-                    "label": "หัวข้อ",
-                    "name": "title",
+                    "label": "หัวข้อ TH",
+                    "name": "title_th",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_688b2141c52c8",
+                    "label": "หัวข้อ EN",
+                    "name": "title_en",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -77,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1749355400
+    "modified": 1753948525
 }
