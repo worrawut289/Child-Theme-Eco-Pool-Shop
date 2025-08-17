@@ -19,7 +19,7 @@ $unique_id = 'categorySwiper_' . uniqid();
                         <a href="<?= esc_url($link); ?>" class="category-card">
                             <?php if ($image) : ?>
                             <img src="<?= esc_url($image['url']); ?>" alt="" class="category-image">
-                            <i class="fa-solid fa-arrow-right category-icon"></i>
+
                             <h3 class="overlay-title"><?= esc_html($name); ?></h3>
                             <h4 class="overlay-title-en"><?= esc_html($name_en); ?></h4>
                             <?php endif; ?>

@@ -140,6 +140,51 @@ function enqueue_swiper_assets() {
 add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
 
 
+// เปลี่ยนชื่อแท็บ "รายละเอียดสินค้า" เป็น "Features"
+add_filter('woocommerce_product_tabs', 'custom_rename_description_tab', 98);
+function custom_rename_description_tab($tabs) {
+    if (isset($tabs['description'])) {
+        $tabs['description']['title'] = __('Features', 'text-domain'); 
+    }
+    return $tabs;
+}
+
+// เพิ่มแท็บใหม่
+add_filter('woocommerce_product_tabs', 'custom_product_tabs');
+function custom_product_tabs($tabs) {
+    // Technical specification Tab
+    if (get_field('technical_specification')) {
+        $tabs['technical_specification_tab'] = array(
+            'title'    => __('Technical specification', 'text-domain'),
+            'priority' => 10,
+            'callback' => 'custom_techinfo_tab_content'
+        );
+    }
+
+    return $tabs;
+}
+    
+
+// แสดงเนื้อหา Technical specification
+function custom_techinfo_tab_content() {
+    echo get_field('technical_specification');
+}
+
+
+/**
+ * Shortcode: [feature_product_section]
+ * แสดง section feature-product (application + PDF download)
+ */
+function feature_product_section_shortcode() {
+    ob_start();
+    $template = locate_template('template-parts/feature-product.php');
+    if ($template) {
+        include $template;
+    }
+    return ob_get_clean();
+}
+add_shortcode('feature_product_section', 'feature_product_section_shortcode');
+
 
 /**
  * Register ACF Block Type

@@ -113,11 +113,16 @@ a {
 }
 
 .box-category-card {
+  padding: 15px 3px 15px 3px;
   border: 1px solid #e5e5e5;
-  padding: 18px;
-
   border-radius: 12px;
 }
+
+.box-category-card:hover {
+  border: 2px solid var(--color-title-main);
+  cursor: pointer;
+}
+
 .category-card {
   position: relative;
   display: flex;
@@ -134,31 +139,13 @@ a {
   border-radius: 100px;
 }
 
-.category-icon {
-  position: absolute;
-  font-size: 16px !important;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 28px;
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-  pointer-events: none;
-}
-
 .category-card:hover .category-image {
-  transform: scale(0.9);
-  filter: brightness(0.6);
+  transform: scale(1.1);
+  /* filter: brightness(0.6); */
 }
 
 .category-card:hover .overlay-title .overlay-title-en {
   color: rgb(76, 166, 250) !important;
-}
-
-.category-card:hover .category-icon {
-  opacity: 1;
 }
 
 .overlay-title {
@@ -582,13 +569,6 @@ a {
 .woocommerce ul.products li.product h2.woocommerce-loop-product__title {
   font-size: 15px;
   color: var(--color-text-main);
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* จำกัด 2 บรรทัด */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-height: 44px; /* ป้องกันสินค้าสูงต่ำไม่เท่ากัน */
-  line-height: 1.6;
 }
 
 /* ราคา */
@@ -649,6 +629,7 @@ a {
 }
 
 .album-gap-0 img:hover {
+  z-index: 10;
   transform: scale(1.2);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28); /* เงาสวย ๆ */
 }
@@ -720,6 +701,94 @@ a {
   .table_component table {
     display: block;
   }
+}
+
+/* Application Section */
+
+.product-application h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.application-list {
+  margin-left: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.application-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.application-list .icon {
+  color: #00a859;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.product-pdf-download {
+  margin-top: 30px;
+}
+
+.pdf-download-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.pdf-download-btn-v2 {
+  display: inline-flex;
+  align-items: center;
+  background: #14284b;
+  color: #fff;
+  font-weight: 500;
+  padding: 14px 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 17px;
+  gap: 12px;
+  transition: background 0.3s;
+  box-shadow: 0 2px 8px rgba(20, 40, 75, 0.08);
+}
+
+.pdf-download-btn-v2:hover {
+  background: #1a3666;
+  color: #fff;
+}
+
+.pdf-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  .pdf-download-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pdf-download-btn-v2 {
+    justify-content: center;
+  }
+}
+
+/* สำหรับ Astra + WooCommerce */
+.woocommerce-product-gallery .flex-control-thumbs li img {
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.woocommerce-product-gallery .flex-control-thumbs li img.flex-active {
+  border: 2px solid var(--color-title-main); /* สีน้ำเงิน */
+  padding: 10px;
 }
 
 /*////////////////////// Line contact button ////////////////////*/
@@ -842,14 +911,14 @@ a {
 
 /* ตำแหน่งปุ่มข้างล่าง - อยู่ขวาสุด */
 .featured-categories-swiper .swiper-button-next {
-  right: 0 !important;
+  right: 10px !important;
   left: auto !important;
   margin-left: 0 !important;
   /* อยู่ขวาสุด */
 }
 
 .featured-categories-swiper .swiper-button-prev {
-  right: 48px !important;
+  right: 60px !important;
   left: auto !important;
   margin-left: 0 !important;
   /* อยู่ข้างซ้ายของปุ่ม next */
@@ -904,6 +973,10 @@ a {
     padding: 0 15px;
   }
 
+  .featured-categories-swiper .swiper {
+    padding-bottom: 40px;
+  }
+
   .featured-categories-swiper .swiper-button-next,
   .featured-categories-swiper .swiper-button-prev {
     width: 35px !important;
@@ -935,6 +1008,10 @@ a {
 @media (max-width: 480px) {
   .featured-categories-swiper {
     padding: 0 10px;
+  }
+
+  .featured-categories-swiper .swiper {
+    padding-bottom: 30px;
   }
 
   .featured-categories-swiper .swiper-button-next,
