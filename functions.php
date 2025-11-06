@@ -378,3 +378,14 @@ add_action('acf/init', function () {
         'keywords'        => ['best', 'seller', 'product'],
     ]);
 });
+
+add_action('acf/init', function () {
+    acf_register_block_type([
+        'name'            => 'group_pool_service_overview',
+        'title'           => __('ACF Pool Service Overview', 'your-textdomain'),
+        'render_template' => get_stylesheet_directory() . '/template-parts/blocks/pool-service-overview.php',
+        'category'        => 'formatting',
+        'icon'            => 'images-alt2',
+        'keywords'        => ['pool', 'service', 'overview'],
+    ]);
+});
